@@ -1,0 +1,716 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  background-color: #FAFAFA; /* Light gray background */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo-image {
+  max-width: 50px;
+  margin-right: 10px;
+}
+/* Navigation Bar Styling */
+.navbar {
+  background-color: #E3F2FD; /* Light blue background */
+  color: #333; /* Dark text for contrast */
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #007ACC; /* Soft blue for branding */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  color: #4A90E2; /* A complementary blue shade */
+}
+
+.logo-image {
+  max-width: 50px; /* Adjust the logo size */
+  margin-right: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #007ACC;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color: #B3E5FC; /* Light hover effect */
+  color: #004A80;
+}
+
+/* Mobile Menu */
+.menu-icon {
+  font-size: 26px;
+  display: none;
+  cursor: pointer;
+  color: #007ACC;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #E3F2FD;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Hero Section Styling */
+.hero {
+  background: url('images/dentist.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  color: #fff; /* White text color for readability */
+}
+
+/* Overlay for better text visibility */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 122, 204, 0.6); /* Soft blue overlay for better contrast */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adding shadow for better readability */
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.hero .hero-image {
+  max-width: 60%; /* Limit the image width to 60% of the container */
+  height: auto;
+  border-radius: 8px; /* Adding some rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* A subtle shadow for the image */
+  margin-bottom: 20px;
+}
+
+.cta {
+  background-color: #FFD700; /* Gold color for a striking call to action */
+  color: #004A80; /* Dark blue text color */
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #FFC107; /* Slightly darker gold for hover effect */
+  transform: scale(1.1); /* Slightly enlarge the button */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px; /* Adjust heading font size for smaller screens */
+  }
+
+  .hero p {
+    font-size: 18px; /* Adjust paragraph font size */
+  }
+
+  .cta {
+    font-size: 16px; /* Adjust button font size */
+    padding: 12px 24px;
+  }
+
+  .hero .hero-image {
+    max-width: 80%; /* Adjust image size for smaller screens */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px; /* Adjust heading font size for smaller screens */
+  }
+
+  .hero p {
+    font-size: 18px; /* Adjust paragraph font size */
+  }
+
+  .cta {
+    font-size: 16px; /* Adjust button font size */
+    padding: 12px 24px;
+  }
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .cta {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Sections */
+.about, .services, .appointment, .contact {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Services */
+.service {
+  background: #F0F7FF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  width: 300px;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #D4E6F1;
+  color: #333;
+  padding: 50px;
+  text-align: center;
+}
+
+/* Appointment Form */
+.appointment input,
+.appointment textarea {
+  border: 1px solid #ccc;
+  background-color: #F9FBFD;
+}
+
+.appointment button {
+  background-color: #A7C7E7;
+  color: #333;
+}
+
+.appointment button:hover {
+  background-color: #8AA9D6;
+}
+
+/* Footer */
+.footer {
+  background: #004A80; /* Dark Blue */
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-links, .footer-contact, .footer-social {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #FFD700; /* Gold underline */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 8px 0;
+}
+
+.footer ul li a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.footer-social a img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(90%);
+}
+
+.footer-social a:hover img {
+  filter: brightness(120%);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #FFD700;
+  padding-top: 15px;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* About Section */
+.about {
+  background-color: #f4f9fb; /* Light background for contrast */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #004f8c; /* Deep blue for header */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #555555; /* Slightly darker gray for text */
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 750px;
+  font-family: 'Arial', sans-serif;
+}
+
+.about p strong {
+  color: #004f8c; /* Highlight the keyword */
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 30px 15px;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+
+/* Services Section */
+.services {
+  background-color: #ffffff; /* White background for clean look */
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 1100px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: #004f8c; /* Deep blue for the header */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.services p {
+  font-size: 1.1rem;
+  color: #555555; /* Slightly darker gray for text */
+  line-height: 1.6;
+  margin: 20px auto;
+  max-width: 900px;
+  font-family: 'Arial', sans-serif;
+}
+
+.services .service-list {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  color: #333333;
+  max-width: 800px;
+  text-align: left;
+}
+
+.services .service-list li {
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.services .service-list li:before {
+  content: '✔'; /* Custom checkmark before each service */
+  position: absolute;
+  left: 0;
+  color: #004f8c;
+  font-size: 1.3rem;
+  top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services {
+    padding: 30px 15px;
+  }
+
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  .services p {
+    font-size: 1rem;
+  }
+
+  .services .service-list li {
+    font-size: 1rem;
+  }
+}
+
+
+/* Appointment Section */
+.appointment {
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 50px 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+.appointment h2 {
+  font-size: 2.5rem;
+  color: #004f8c; /* Deep blue for the header */
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.appointment form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.appointment label {
+  font-size: 1rem;
+  color: #333333;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.appointment input,
+.appointment textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.appointment textarea {
+  resize: vertical;
+}
+
+.appointment button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #004f8c; /* Matching blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.appointment button:hover {
+  background-color: #003c72; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .appointment {
+    padding: 30px 15px;
+  }
+
+  .appointment h2 {
+    font-size: 2rem;
+  }
+
+  .appointment form {
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .appointment label {
+    font-size: 0.9rem;
+  }
+
+  .appointment input,
+  .appointment textarea {
+    font-size: 0.9rem;
+  }
+
+  .appointment button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+
+/* Contact Section */
+.contact {
+  background-color: #ffffff; /* White background for a clean look */
+  padding: 50px 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #004f8c; /* Deep blue for the header */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.contact .contact-info {
+  background-color: #f5f5f5; /* Light gray background for the contact info */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+.contact .contact-info p {
+  margin: 5px 0;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact label {
+  font-size: 1rem;
+  color: #333333;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.contact textarea {
+  resize: vertical;
+}
+
+.contact button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background-color: #004f8c; /* Matching blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #003c72; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 30px 15px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+
+  .contact form {
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .contact label {
+    font-size: 0.9rem;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
